@@ -4,13 +4,15 @@ import { config } from "./src/config/appConfig.js";
 import newsRoutes from "./src/routes/newsRoutes.js";
 import cors from "cors"
 import { connectDb } from "./src/config/db.js";
-import { clerkMiddleware } from '@clerk/express'
+import { clerkMiddleware } from '@clerk/express';
+import clerkWebhooks from "./src/controllers/clerkWebhooks.js";
 const app = express();
 
 connectDb();
 // Middleware
 app.use(express.json());
 app.use(clerkMiddleware());
+app.post("/api/clerk", express.raw({ type: 'application/json' }), clerkWebhooks);
 
 // ✅ Enable CORS for frontend origin (Vite: http://localhost:5173)
 app.use(cors({
