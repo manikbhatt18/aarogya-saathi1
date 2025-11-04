@@ -9,26 +9,36 @@ axios.defaults.baseURL=import.meta.env.VITE_BACKEND_URL;
 const AppContext=createContext();
 export const AppProvider=({children})=>{
     const navigate=useNavigate();
-    const {user}=useUser();
-    const{getToken}=useAuth();
+   
+
+    // fetchnew start
     
- 
-   const [news, setNews] = useState([]);
+  const [articles, setArticles] = useState([]);     // will hold the articles array
+  const [articalCount, setArticalCount] = useState(0);    // will hold total count
 
   const fetchNews = async () => {
     try {
-      const { data } = await axios.get("api/news");  
-      if (data.success) {  setNews(data.news); console.log("News from API:", data.news);
- } else {toast.error(data.message); }
+   const { data } = await axios.get("http://localhost:4000/api/news");
+
+    
+      if (data.success === true) {  // match backend "status"
+        setArticles(data.articles);         // match backend "articles"
+        setArticalCount(data.total);           // get total from backend
+        console.log("News from API:", data.articles);
+      } else {
+        toast.error(data.message || "Failed to fetch news");
+      }
     } catch (err) {
-      console.error("Error fetching News:", err.message);;
-      toast.error(err.message);
+      console.error("Error fetching News:", err.message);
+      toast.error("Error fetching News");
     }
   };
 
   useEffect(() => {
     fetchNews();
   }, []);
+
+//   fectnewss end
   
   const fetchUser=async()=>{
    try{ const {data}=await axios.get("/api/user",{headers:{Authorization:`Bearer ${await getToken()}`}})
@@ -44,10 +54,9 @@ catch(err){
 toast.error(err.message);
       } 
  }
-useEffect(()=>{if(user){fetchUser();} },[user])
-const value={
-axios,user,navigate,getToken,isOwner,showCompanyReg,
-setShowCompanyReg,setIsOwner,tenders,setTenders,setSearchedIndustries,searchedIndustries
+ 
+const value={articles,setArticles,articalCount, setArticalCount
+ 
     }
 return (
      <AppContext.Provider value={value}>
