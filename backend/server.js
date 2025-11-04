@@ -2,6 +2,7 @@ import express from "express";
 import "dotenv/config"
 import { config } from "./src/config/appConfig.js";
 import newsRoutes from "./src/routes/newsRoutes.js";
+import hospitalRoutes from "./src/routes/hospitalRoutes.js";
 import cors from "cors"
 import { connectDb } from "./src/config/db.js";
 import { clerkMiddleware } from '@clerk/express'

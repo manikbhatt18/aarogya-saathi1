@@ -1,4 +1,6 @@
 import React from 'react';
+import { useEffect } from "react";
+
 // We'll use lucide-react for high-quality, lightweight icons
 import { 
   HeartPulse, Stethoscope, FilePlus2, ShieldCheck,
@@ -11,6 +13,36 @@ import {
  * cards that use the requested #0096f2 theme color.
  */
 const Home = () => {
+
+  useEffect(() => {
+  // Create a new <script> element
+  const script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+  script.async = true;
+
+  // When script loads, initialize the Voiceflow chat widget
+  script.onload = () => {
+    if (window.voiceflow?.chat) {
+      window.voiceflow.chat.load({
+        verify: { projectID: "6909c95ac62b5a1186a5ccde" },
+        url: "https://general-runtime.voiceflow.com",
+        versionID: "production",
+        voice: {
+          url: "https://runtime-api.voiceflow.com",
+        },
+      });
+    }
+  };
+
+  // Append the script to the DOM
+  document.body.appendChild(script);
+
+  // Cleanup (optional, to remove script on unmount)
+  return () => {
+    document.body.removeChild(script);
+  };
+}, []);
   // An array to hold feature card information for the hero
   const heroFeatures = [
     {
