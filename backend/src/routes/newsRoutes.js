@@ -1,9 +1,8 @@
 import express from "express";
-import { getMedicalNews } from "../controllers/newsControllers.js";
+import { getNews } from "../controllers/newsControllers.js";
 
 const router = express.Router();
 
-// Route: GET /api/news
-router.get("/", getMedicalNews);
+router.get("/", getNews);
 
 export default router;
