@@ -1,15 +1,23 @@
 import express from "express";
-import dotenv from "dotenv";
-import cors from "cors";
-import newsRoutes from "./src/routes/newsRoutes.js"; // adjust path if needed
-import hospitalRoutes from "./src/routes/hospitalRoutes.js";
-
-dotenv.config();
-
+import "dotenv/config"
+import { config } from "./src/config/appConfig.js";
+import newsRoutes from "./src/routes/newsRoutes.js";
+import cors from "cors"
+import { connectDb } from "./src/config/db.js";
+import { clerkMiddleware } from '@clerk/express'
 const app = express();
 
-//Middlewares
-app.use(cors());
+connectDb();
+// Middleware
+app.use(express.json());
+app.use(clerkMiddleware());
+
+// ✅ Enable CORS for frontend origin (Vite: http://localhost:5173)
+app.use(cors({
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 //Routes
