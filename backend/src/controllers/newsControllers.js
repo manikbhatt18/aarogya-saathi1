@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getMedicalNews = async (req, res) => {
+export const getNews = async (req, res) => {
   try {
     const query = req.query.q || "medical healthcare";
     const url = `https://gnews.io/api/v4/top-headlines?category=health&lang=en&country=in&max=50&apikey=${process.env.GNEWS_API_KEY}`;

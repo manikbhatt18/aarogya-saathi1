@@ -2,6 +2,7 @@ import express from "express";
 import "dotenv/config"
 import { config } from "./src/config/appConfig.js";
 import newsRoutes from "./src/routes/newsRoutes.js";
+import hospitalRoutes from "./src/routes/hospitalRoutes.js";
 import cors from "cors"
 import { connectDb } from "./src/config/db.js";
 import { clerkMiddleware } from '@clerk/express';
@@ -22,15 +23,17 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Routes
+//Routes
 app.use("/api/news", newsRoutes);
+app.use("/api/hospitals", hospitalRoutes);
 
-// Root route
+//Default route
 app.get("/", (req, res) => {
-  res.send("Medical News API is running!");
+  res.send("🩺 Aarogya Saathi Backend Running Successfully!");
 });
 
-// Start server
-app.listen(config.port, () => {
-  console.log(`Server running on http://localhost:${config.port}`);
+//Start Server
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
