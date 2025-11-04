@@ -36,7 +36,6 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "AboutUs", href: "/aboutUs" },
     { label: "News", href: "/news" },
     { label: "ContactUs", href: "/contactUs" },
     { label: "Services", href: "/services" },
@@ -77,7 +76,7 @@ const Navbar = () => {
             >
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="hover:text-yellow-500">
+                  <a href={link.href} className="hover:text-primary">
                     {link.label}
                   </a>
                 </li>
@@ -112,11 +111,11 @@ const Navbar = () => {
               >
                 <a
                   href={link.href}
-                  className={`relative group ${location.pathname === link.href ? "text-yellow-400" : ""
+                  className={`relative group ${location.pathname === link.href ? "text-primary" : ""
                     }`}
                 >
                   {link.label}
-                  <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
                 </a>
               </motion.li>
             ))}
@@ -151,7 +150,7 @@ const Navbar = () => {
           ) : (
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="bg-yellow-400 text-black px-5 py-2 rounded-md hover:bg-yellow-500 transition text-sm font-semibold"
+              className="bg-primary text-white px-5 py-2 rounded-md hover:bg-blue-500 transition text-sm font-semibold"
               onClick={openSignIn}
             >
               Log In

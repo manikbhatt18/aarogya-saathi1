@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import Footer from './Components/Footer';
 import ContactUs from './Pages/ContactUs';
 import News from './Pages/News';
-import AboutUs from './Pages/AboutUs';
+ 
 import Services from './Pages/Services';
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
     <Route path="/contactUs" element={<ContactUs/>}/>
   <Route path="/news" element={<News/>}/>
   <Route path="/services" element={<Services/>}/>
-<Route path="/aboutUs" element={<AboutUs/>}/>
+ 
      </Routes>
      <Footer/>
     </div>
