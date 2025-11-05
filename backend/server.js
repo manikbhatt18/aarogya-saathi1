@@ -17,18 +17,18 @@ const app = express();
 
 connectDb();
 // Middleware
- 
-
-app.use(clerkMiddleware());
-app.post("/api/clerk", express.raw({ type: 'application/json' }), clerkWebhooks);
-app.use(express.json());
-// ✅ Enable CORS for frontend origin (Vite: http://localhost:5173)
-app.use(cors({
+ app.use(cors({
   origin: "http://localhost:5173",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
+app.post("/api/clerk", express.raw({ type: 'application/json' }), clerkWebhooks);
+app.use(express.json());
+// ✅ Enable CORS for frontend origin (Vite: http://localhost:5173)
+
+
+app.use(clerkMiddleware());
 
 //Routes
 app.use("/api/news", newsRoutes);
