@@ -18,7 +18,7 @@ const app = express();
 connectDb();
 // Middleware
  app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://aarogya-saathi1-ooc2.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
