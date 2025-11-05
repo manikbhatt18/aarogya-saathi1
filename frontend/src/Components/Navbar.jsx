@@ -3,6 +3,7 @@ import  { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const BookIcon = () => (
   <svg
@@ -22,6 +23,15 @@ const BookIcon = () => (
 );
 
 const Navbar = () => {
+    const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "hi" : "en";
+    i18n.changeLanguage(newLang);
+    localStorage.setItem("i18nextLng", newLang);
+    // If you want to fetch translated API content on change, emit an event or update state
+    // e.g. window.dispatchEvent(new Event('langChanged'))
+  };
    const [sticky, setSticky] = useState(false);
    const { openSignIn } = useClerk();
    const {user}=useUser();
@@ -81,6 +91,13 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+               <button
+          onClick={toggleLanguage}
+          className="px-3 py-1 rounded bg-gradient-to-r from-[#14b8a6] to-[#2563eb] text-white"
+          aria-label="Toggle language"
+        >
+          {t("nav.toggle_to")}
+        </button>
              
             </ul>
           </div>

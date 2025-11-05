@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Home",
+    "news": "News",
+    "contact": "Contact",
+    "toggle_to": "हिंदी"
+  },
+  "contact": {
+    "contact_us": "Contact Us",
+    "help_text": "We're here to help. Reach out to us with any questions or feedback.",
+    "contact_info": "Contact Information",
+    "fill_form_text": "Fill up the form and our team will get back to you within 24 hours.",
+    "email_label": "Email",
+    "phone_label": "Phone No",
+    "get_in_touch": "Get in Touch",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "message": "Message",
+    "send_message": "Send Message",
+    "sending": "Sending..."
+  }
+,
+
+  "home": {
+
+    
+    "title": "Aarogya Saathi",
+    "tagline": "Your Personal Health Companion, Always by Your Side.",
+    
+    "hero_features": {
+      "expert_consultations_title": "Expert Consultations",
+      "expert_consultations_desc": "Connect with top doctors instantly.",
+      
+      "digital_records_title": "Digital Records",
+      "digital_records_desc": "All your health reports, secured in one place.",
+      
+      "data_security_title": "Data Security",
+      "data_security_desc": "Your privacy is our top priority."
+    },
+
+    "advanced_features_heading": "Explore Our Advanced Features",
+    "advanced_features": {
+      "symptom_checker_title": "Symptom Checker",
+      "symptom_checker_desc": "Enter your symptoms to get an AI-powered analysis of potential conditions.",
+      
+      "whatsapp_chatbot_title": "WhatsApp Chatbot",
+      "whatsapp_chatbot_desc": "Get instant health tips, book appointments, and ask queries 24/7 via WhatsApp.",
+      
+      "nearby_clinics_title": "Nearby Clinics",
+      "nearby_clinics_desc": "Find and navigate to the nearest partner clinics, labs, and pharmacies.",
+      
+      "health_news_title": "Health News",
+      "health_news_desc": "Stay updated with the latest health bulletins and wellness tips."
+    },
+
+    "medical_tools": {
+      "heading": "Essential Medical Tools",
+      "stethoscope_name": "Stethoscope",
+      "stethoscope_desc": "Essential for listening to heart and lung sounds.",
+      
+      "microscope_name": "Microscope",
+      "microscope_desc": "Used for detailed examination of samples.",
+      
+      "bp_monitor_name": "BP Monitor",
+      "bp_monitor_desc": "Crucial for measuring and tracking blood pressure.",
+      
+      "mri_scanner_name": "MRI Scanner",
+      "mri_scanner_desc": "Provides detailed images of organs and tissues.",
+      
+      "digital_xray_name": "Digital X-Ray",
+      "digital_xray_desc": "Advanced imaging for accurate diagnosis.",
+      
+      "operation_theatre_name": "Operation Theatre",
+      "operation_theatre_desc": "Sterile environment for surgical procedures."
+    }
+  },
+  
+  "heroFeatures": {
+    "expertConsultations": { "title": "Expert Consultations", "description": "Connect with top doctors instantly." },
+    "digitalRecords": { "title": "Digital Records", "description": "All your health reports, secured in one place." },
+    "dataSecurity": { "title": "Data Security", "description": "Your privacy is our top priority." }
+  },
+  "medicalTools": {
+    "stethoscope": { "name": "Stethoscope", "description": "Essential for listening to heart and lung sounds." },
+    "microscope": { "name": "Microscope", "description": "Used for detailed examination of samples." },
+    "bpMonitor": { "name": "BP Monitor", "description": "Crucial for measuring and tracking blood pressure." },
+    "mriScanner": { "name": "MRI Scanner", "description": "Provides detailed images of organs and tissues." },
+    "digitalXray": { "name": "Digital X-Ray", "description": "Advanced imaging for accurate diagnosis." },
+    "operationTheatre": { "name": "Operation Theatre", "description": "Sterile environment for surgical procedures." }
+  },
+  "advancedFeatures": {
+    "symptomChecker": { "title": "Symptom Checker", "description": "Enter your symptoms to get an AI-powered analysis of potential conditions." },
+    "whatsappChatbot": { "title": "WhatsApp Chatbot", "description": "Get instant health tips, book appointments, and ask queries 24/7 via WhatsApp." },
+    "nearbyClinics": { "title": "Nearby Clinics", "description": "Find and navigate to the nearest partner clinics, labs, and pharmacies." },
+    "healthNews": { "title": "Health News", "description": "Stay updated with the latest health bulletins and wellness tips." }
+  }
+
+
+
+,
+  "news": {
+    "loading": "Loading news...",
+    "no_articles": "No articles available"
+  }
+}

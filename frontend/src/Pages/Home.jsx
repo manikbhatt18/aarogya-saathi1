@@ -1,6 +1,8 @@
 import React from 'react';
 import {motion} from "framer-motion";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 
 // We'll use lucide-react for high-quality, lightweight icons
 import { 
@@ -14,6 +16,7 @@ import {
  * cards, a tool gallery, and a new responsive timeline for advanced features.
  */
 const Home = () => {
+  const { t } = useTranslation();
 
   // --- Keyframes for Animations ---
   // We add this style block directly for self-contained animations
@@ -87,87 +90,88 @@ const Home = () => {
   };
 }, []);
   // An array to hold feature card information for the hero
-  const heroFeatures = [
-    {
-      icon: Stethoscope,
-      title: 'Expert Consultations',
-      description: 'Connect with top doctors instantly.',
-    },
-    {
-      icon: FilePlus2,
-      title: 'Digital Records',
-      description: 'All your health reports, secured in one place.',
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Data Security',
-      description: 'Your privacy is our top priority.',
-    },
-  ];
+  // Hero Features
+const heroFeatures = [
+  {
+    icon: Stethoscope,
+    title: t("heroFeatures.expertConsultations.title"),
+    description: t("heroFeatures.expertConsultations.description"),
+  },
+  {
+    icon: FilePlus2,
+    title: t("heroFeatures.digitalRecords.title"),
+    description: t("heroFeatures.digitalRecords.description"),
+  },
+  {
+    icon: ShieldCheck,
+    title: t("heroFeatures.dataSecurity.title"),
+    description: t("heroFeatures.dataSecurity.description"),
+  },
+];
 
-  // Array for the specific medical tool images with descriptions
-  const medicalTools = [
-    {
-      src: 'https://images.unsplash.com/photo-1655913197692-012897652d13?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3RldGhoc2NvcGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600',
-      alt: 'Stethoscope',
-      name: 'Stethoscope',
-      description: 'Essential for listening to heart and lung sounds.'
-    },
-    {
-      src: 'https://plus.unsplash.com/premium_photo-1661391540555-c3c9786cb301?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWljcm9zY29wZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600',
-      alt: 'Microscope',
-      name: 'Microscope',
-      description: 'Used for detailed examination of samples.'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymxvb2QlMjBwcmVzc3VyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600',
-      alt: 'Blood Pressure Monitor',
-      name: 'BP Monitor',
-      description: 'Crucial for measuring and tracking blood pressure.'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1666214280352-db292c05fd80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXJpfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600',
-      alt: 'MRI Machine',
-      name: 'MRI Scanner',
-      description: 'Provides detailed images of organs and tissues.'
-    },
-    {
-      src: 'https://media.istockphoto.com/id/2144533767/photo/dentist-analyze-digital-x-ray-film-from-scanner-machine.jpg?s=2048x2048&w=is&k=20&c=JuZGg6dODUkTRnM1Ab0TFbDZiDiw6ZsEctD6SiVQfyc=',
-      alt: 'Dental X-Ray',
-      name: 'Digital X-Ray',
-      description: 'Advanced imaging for accurate diagnosis.'
-    },
-    {
-      src: 'https://plus.unsplash.com/premium_photo-1702599099948-5ed43d0a3048?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b3BlcmF0aW9uJTIwdGhlYXRyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600',
-      alt: 'Operation Theatre',
-      name: 'Operation Theatre',
-      description: 'Sterile environment for surgical procedures.'
-    },
-  ];
+// Medical Tools
+const medicalTools = [
+  {
+    src: "https://images.unsplash.com/photo-1655913197692-012897652d13?auto=format&fit=crop&q=60&w=600",
+    alt: "Stethoscope",
+    name: t("medicalTools.stethoscope.name"),
+    description: t("medicalTools.stethoscope.description"),
+  },
+  {
+    src: "https://plus.unsplash.com/premium_photo-1661391540555-c3c9786cb301?auto=format&fit=crop&q=60&w=600",
+    alt: "Microscope",
+    name: t("medicalTools.microscope.name"),
+    description: t("medicalTools.microscope.description"),
+  },
+  {
+    src: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&q=60&w=600",
+    alt: "BP Monitor",
+    name: t("medicalTools.bpMonitor.name"),
+    description: t("medicalTools.bpMonitor.description"),
+  },
+  {
+    src: "https://images.unsplash.com/photo-1666214280352-db292c05fd80?auto=format&fit=crop&q=60&w=600",
+    alt: "MRI Machine",
+    name: t("medicalTools.mriScanner.name"),
+    description: t("medicalTools.mriScanner.description"),
+  },
+  {
+    src: "https://media.istockphoto.com/id/2144533767/photo/dentist-analyze-digital-x-ray-film.jpg?s=2048x2048",
+    alt: "Dental X-Ray",
+    name: t("medicalTools.digitalXray.name"),
+    description: t("medicalTools.digitalXray.description"),
+  },
+  {
+    src: "https://plus.unsplash.com/premium_photo-1702599099948-5ed43d0a3048?auto=format&fit=crop&q=60&w=600",
+    alt: "Operation Theatre",
+    name: t("medicalTools.operationTheatre.name"),
+    description: t("medicalTools.operationTheatre.description"),
+  },
+];
 
-  // NEW: Array for the advanced features timeline
-  const advancedFeatures = [
-    {
-      icon: FileSearch,
-      title: 'Symptom Checker',
-      description: 'Enter your symptoms to get an AI-powered analysis of potential conditions.'
-    },
-    {
-      icon: Bot,
-      title: 'WhatsApp Chatbot',
-      description: 'Get instant health tips, book appointments, and ask queries 24/7 via WhatsApp.'
-    },
-    {
-      icon: MapPin,
-      title: 'Nearby Clinics',
-      description: 'Find and navigate to the nearest partner clinics, labs, and pharmacies.'
-    },
-      {
-      icon: Newspaper,
-      title: 'Health News',
-      description: 'Stay updated with the latest health bulletins and wellness tips.'
-    }
-  ];
+// Advanced Features
+const advancedFeatures = [
+  {
+    icon: FileSearch,
+    title: t("advancedFeatures.symptomChecker.title"),
+    description: t("advancedFeatures.symptomChecker.description"),
+  },
+  {
+    icon: Bot,
+    title: t("advancedFeatures.whatsappChatbot.title"),
+    description: t("advancedFeatures.whatsappChatbot.description"),
+  },
+  {
+    icon: MapPin,
+    title: t("advancedFeatures.nearbyClinics.title"),
+    description: t("advancedFeatures.nearbyClinics.description"),
+  },
+  {
+    icon: Newspaper,
+    title: t("advancedFeatures.healthNews.title"),
+    description: t("advancedFeatures.healthNews.description"),
+  },
+];
 
   // Custom hover effect for HERO FEATURE cards (Icon + H3 + P)
   const applyFeatureHover = (e) => {

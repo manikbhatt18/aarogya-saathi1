@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "होम",
+    "news": "समाचार",
+    "contact": "संपर्क",
+    "toggle_to": "English"
+  },
+ 
+  "contact": {
+    "contact_us": "संपर्क करें",
+    "help_text": "हम आपकी सहायता के लिए यहाँ हैं। किसी भी प्रश्न या प्रतिक्रिया के लिए हमसे संपर्क करें।",
+    "contact_info": "संपर्क जानकारी",
+    "fill_form_text": "फॉर्म भरें और हमारी टीम 24 घंटों के भीतर आपसे संपर्क करेगी।",
+    "email_label": "ईमेल",
+    "phone_label": "फ़ोन नंबर",
+    "get_in_touch": "संपर्क में रहें",
+    "first_name": "पहला नाम",
+    "last_name": "अंतिम नाम",
+    "email": "ईमेल",
+    "message": "संदेश",
+    "send_message": "संदेश भेजें",
+    "sending": "भेजा जा रहा है..."
+  
+},
+
+  "home": {
+    "title": "आरोग्य साथी",
+    "tagline": "आपका व्यक्तिगत स्वास्थ्य साथी, हमेशा आपके साथ।",
+    
+    "hero_features": {
+      "expert_consultations_title": "विशेषज्ञ परामर्श",
+      "expert_consultations_desc": "शीर्ष डॉक्टरों से तुरंत संपर्क करें।",
+      
+      "digital_records_title": "डिजिटल रिकॉर्ड्स",
+      "digital_records_desc": "आपकी सभी स्वास्थ्य रिपोर्ट्स, एक ही जगह सुरक्षित।",
+      
+      "data_security_title": "डेटा सुरक्षा",
+      "data_security_desc": "आपकी गोपनीयता हमारी सर्वोच्च प्राथमिकता है।"
+    },
+
+    "advanced_features_heading": "हमारी उन्नत सुविधाओं का अन्वेषण करें",
+    "advanced_features": {
+      "symptom_checker_title": "लक्षण चेकर",
+      "symptom_checker_desc": "अपने लक्षण दर्ज करें और एआई आधारित विश्लेषण प्राप्त करें।",
+      
+      "whatsapp_chatbot_title": "व्हाट्सएप चैटबॉट",
+      "whatsapp_chatbot_desc": "स्वास्थ्य सुझाव, अपॉइंटमेंट बुकिंग और प्रश्नों के उत्तर 24/7 प्राप्त करें।",
+      
+      "nearby_clinics_title": "निकटवर्ती क्लीनिक",
+      "nearby_clinics_desc": "निकटतम क्लीनिक, लैब और फार्मेसी खोजें और वहाँ जाएँ।",
+      
+      "health_news_title": "स्वास्थ्य समाचार",
+      "health_news_desc": "नवीनतम स्वास्थ्य बुलेटिन और वेलनेस टिप्स से अपडेट रहें।"
+    },
+
+    "medical_tools": {
+      "heading": "महत्वपूर्ण चिकित्सीय उपकरण",
+      "stethoscope_name": "स्टीथोस्कोप",
+      "stethoscope_desc": "हृदय और फेफड़ों की ध्वनियों को सुनने के लिए आवश्यक।",
+      
+      "microscope_name": "माइक्रोस्कोप",
+      "microscope_desc": "नमूनों की विस्तृत जांच के लिए उपयोग किया जाता है।",
+      
+      "bp_monitor_name": "बीपी मॉनिटर",
+      "bp_monitor_desc": "रक्तचाप को मापने और ट्रैक करने के लिए महत्वपूर्ण।",
+      
+      "mri_scanner_name": "एमआरआई स्कैनर",
+      "mri_scanner_desc": "अंगों और ऊतकों की विस्तृत छवियाँ प्रदान करता है।",
+      
+      "digital_xray_name": "डिजिटल एक्स-रे",
+      "digital_xray_desc": "सटीक निदान के लिए उन्नत इमेजिंग।",
+      
+      "operation_theatre_name": "ऑपरेशन थिएटर",
+      "operation_theatre_desc": "सर्जिकल प्रक्रियाओं के लिए स्वच्छ वातावरण।"
+    }
+  }
+,
+
+  "heroFeatures": {
+    "expertConsultations": { "title": "विशेषज्ञ परामर्श", "description": "शीर्ष डॉक्टरों से तुरंत जुड़ें।" },
+    "digitalRecords": { "title": "डिजिटल रिकॉर्ड्स", "description": "आपकी सभी स्वास्थ्य रिपोर्ट्स एक ही जगह सुरक्षित।" },
+    "dataSecurity": { "title": "डेटा सुरक्षा", "description": "आपकी गोपनीयता हमारी प्राथमिकता है।" }
+  },
+  "medicalTools": {
+    "stethoscope": { "name": "स्टीथोस्कोप", "description": "दिल और फेफड़ों की ध्वनियाँ सुनने के लिए आवश्यक।" },
+    "microscope": { "name": "माइक्रोस्कोप", "description": "नमूनों की विस्तृत जांच के लिए उपयोगी।" },
+    "bpMonitor": { "name": "बीपी मॉनिटर", "description": "रक्तचाप मापने और ट्रैक करने के लिए आवश्यक।" },
+    "mriScanner": { "name": "एमआरआई स्कैनर", "description": "अंगों और ऊतकों की विस्तृत छवियाँ प्रदान करता है।" },
+    "digitalXray": { "name": "डिजिटल एक्स-रे", "description": "सटीक निदान के लिए उन्नत इमेजिंग।" },
+    "operationTheatre": { "name": "ऑपरेशन थिएटर", "description": "शल्य चिकित्सा प्रक्रियाओं के लिए निष्फल वातावरण।" }
+  },
+  "advancedFeatures": {
+    "symptomChecker": { "title": "लक्षण चेकर", "description": "अपने लक्षण दर्ज करें और एआई से विश्लेषण प्राप्त करें।" },
+    "whatsappChatbot": { "title": "व्हाट्सएप चैटबॉट", "description": "तुरंत स्वास्थ्य सुझाव और अपॉइंटमेंट बुकिंग 24/7।" },
+    "nearbyClinics": { "title": "निकटतम क्लीनिक", "description": "पास के क्लीनिक, लैब्स और फार्मेसी खोजें।" },
+    "healthNews": { "title": "स्वास्थ्य समाचार", "description": "नवीनतम स्वास्थ्य समाचार और सुझाव प्राप्त करें।" }
+  }
+
+
+
+,
+  "news": {
+    "loading": "समाचार लोड हो रहा है...",
+    "no_articles": "कोई लेख उपलब्ध नहीं है"
+  }
+}

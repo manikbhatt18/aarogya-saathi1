@@ -5,6 +5,8 @@ import Home from './Pages/Home';
 import Footer from './Components/Footer';
 import ContactUs from './Pages/ContactUs';
 import News from './Pages/News';
+import "./i18n";
+
  
 import Services from './Pages/Services';
 const App = () => {
