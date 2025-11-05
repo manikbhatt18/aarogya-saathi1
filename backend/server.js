@@ -17,21 +17,26 @@ const app = express();
 
 connectDb();
 // Middleware
-
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded ✅" : "Missing ❌");
-
-app.use(clerkMiddleware());
-app.post("/api/clerk", express.raw({ type: 'application/json' }), clerkWebhooks);
 app.use(express.json());
-
-// ✅ Enable CORS for frontend origin (Vite: http://localhost:5173)
 app.use(cors({
   origin: "http://localhost:5173",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
-app.use(express.json());
+
+ 
+
+app.use(clerkMiddleware());
+app.post("/api/clerk", express.raw({ type: 'application/json' }), clerkWebhooks);
+
+
+// ✅ Enable CORS for frontend origin (Vite: http://localhost:5173)
+// app.use(cors({
+//   origin: "http://localhost:5173",
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true
+// }));
+// app.use(express.json());
 
 //Routes
 app.use("/api/news", newsRoutes);
