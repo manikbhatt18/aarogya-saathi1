@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 // We'll use lucide-react for high-quality, lightweight icons
 import { 
-  HeartPulse, Stethoscope, FilePlus2, ShieldCheck,
+  HeartPulse, Stethoscope, FilePlus2, ShieldCheck,
   FileSearch, Bot, MapPin,Newspaper // Icons for advanced features
 } from 'lucide-react';
 
@@ -92,21 +92,21 @@ const Home = () => {
   // An array to hold feature card information for the hero
   // Hero Features
 const heroFeatures = [
-  {
-    icon: Stethoscope,
-    title: t("heroFeatures.expertConsultations.title"),
-    description: t("heroFeatures.expertConsultations.description"),
-  },
-  {
-    icon: FilePlus2,
-    title: t("heroFeatures.digitalRecords.title"),
-    description: t("heroFeatures.digitalRecords.description"),
-  },
-  {
-    icon: ShieldCheck,
-    title: t("heroFeatures.dataSecurity.title"),
-    description: t("heroFeatures.dataSecurity.description"),
-  },
+  {
+    icon: Bot, // Changed from Stethoscope
+    title: "Chat via WhatsApp & SMS", // New key. E.g., "Chat via WhatsApp & SMS"
+    description: "Get instant help and answers on your favorite messaging apps.", // New key. E.g., "Get instant help and answers on your favorite messaging apps."
+  },
+  {
+    icon: Newspaper, // Changed from FilePlus2
+    title:  "Health News", // New key. E.g., "Health News"
+    description: "Stay updated with the latest articles, breakthroughs, and wellness tips.", // New key. E.g., "Stay updated with the latest articles, breakthroughs, and wellness tips."
+  },
+  {
+    icon: MapPin, // Changed from ShieldCheck
+    title:  "Nearby Hospitals", // New key. E.g., "Nearby Hospitals"
+    description: "Quickly find clinics, pharmacies, and hospitals near you.", // New key. E.g., "Quickly find clinics, pharmacies, and hospitals near you."
+  },
 ];
 
 // Medical Tools
