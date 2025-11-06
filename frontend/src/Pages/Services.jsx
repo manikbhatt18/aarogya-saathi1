@@ -529,7 +529,7 @@ const Services = () => {
     setIsLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/hospitals?lat=${lat}&lng=${lng}`
+        `https://aarogya-saathi1.vercel.app/api/hospitals?lat=${lat}&lng=${lng}`
       );
       setHospitals(res.data.hospitals || []);
     } catch (error) {
