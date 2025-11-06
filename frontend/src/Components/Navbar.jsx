@@ -52,64 +52,82 @@ const Navbar = () => {
     // Removed "About"
   ];
   return (
-   <motion.div
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${sticky
-          ? "bg-white shadow-md text-gray-800"
-          : "bg-gradient-to-b from-black/70 to-transparent text-white"
-        }`}
-      initial={{ y: -60, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-    >
-      <div className="navbar container mx-auto px-4 py-2 flex justify-between items-center">
-        {/* Mobile Start */}
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 p-3 shadow bg-white rounded-lg w-52 text-gray-800 space-y-2"
-            >
-              {navLinks.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="hover:text-primary">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-               <button
-          onClick={toggleLanguage}
-          className="px-3 py-1 rounded bg-gradient-to-r from-[#14b8a6] to-[#2563eb] text-white"
-          aria-label="Toggle language"
-        >
-          {t("nav.toggle_to")}
-        </button>
-             
-            </ul>
-          </div>
-          <motion.a
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-2xl font-bold tracking-wide ml-2"
-            href="/"
+  <motion.div
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    sticky
+      ? "bg-white shadow-md text-gray-800"
+      : "bg-gradient-to-b from-black/70 to-transparent text-white"
+  }`}
+  initial={{ y: -60, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+>
+  <div className="navbar container mx-auto px-4 py-2 flex justify-between items-center">
+    {/* Mobile Start */}
+    <div className="navbar-start">
+      <div className="dropdown">
+        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-           Aarogya Sathi
-          </motion.a>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </div>
+        <ul
+          tabIndex={0}
+          className="menu menu-sm dropdown-content mt-3 p-3 shadow bg-white rounded-lg w-52 text-gray-800 space-y-2"
+        >
+          {navLinks.map((link) => (
+            <li key={link.label}>
+              <a href={link.href} className="hover:text-primary">
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <button
+            onClick={toggleLanguage}
+            className="px-3 py-1 rounded bg-gradient-to-r from-[#14b8a6] to-[#2563eb] text-white"
+            aria-label="Toggle language"
+          >
+            {t("nav.toggle_to")}
+          </button>
+        </ul>
+      </div>
+      <motion.a
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        href="/"
+        className="flex items-center ml-2" // The 'flex items-center' already handles the side-by-side alignment
+      >
+        <img
+          src="/logo.png" // if it's in the public folder
+          // src={logo}           // if you imported it from src/assets
+          alt="Aarogya Saathi Logo"
+          // Applied rounded-full for the circle shape
+          // Ensured h-10 and w-10 are equal for a perfect circle
+          // Added object-cover to prevent the image from stretching
+          className="h-10 w-10 rounded-full object-cover"
+        />
+
+        {/* --- THIS IS THE UPDATED LINE --- */}
+        <span
+          className={`ml-3 text-xl font-bold ${
+            sticky ? "text-gray-800" : "text-white"
+          }`}
+        >
+          Aarogya Saathi
+        </span>
+      </motion.a>
+
         </div>
 
         {/* Desktop Center */}

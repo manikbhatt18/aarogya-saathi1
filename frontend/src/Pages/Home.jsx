@@ -89,6 +89,7 @@ const Home = () => {
     document.body.removeChild(script);
   };
 }, []);
+
   // An array to hold feature card information for the hero
   // Hero Features
 const heroFeatures = [
