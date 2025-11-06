@@ -18,7 +18,7 @@ export const AppProvider=({children})=>{
 
   const fetchNews = async () => {
     try {
-   const { data } = await axios.get("http://localhost:4000/api/news");
+   const { data } = await axios.get("https://aarogya-saathi1.vercel.app/api/news");
 
     
       if (data.success === true) {  // match backend "status"
